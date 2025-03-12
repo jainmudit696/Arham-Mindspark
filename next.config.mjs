@@ -1,3 +1,4 @@
+// filepath: d:\VS-Code\Arham Mindspark\next.config.mjs
 let userConfig = undefined
 try {
   userConfig = await import('./v0-user-next.config')
@@ -21,6 +22,7 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  output: 'export', // Add this line for static export
 }
 
 mergeConfig(nextConfig, userConfig)
